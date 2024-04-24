@@ -92,7 +92,7 @@ def fetch_query(connection, option):
             tablename = str(input("Enter TableName : "))
             col = str(input("Enter Column : "))
             another_table = str(input("Enter AnotherTable : "))
-            query = f"SELECT * FROM {tablename} WHERE {col} IN (SELECT {col} FROM {another_table}) LIMIT 5;"
+            query = f"SELECT * FROM {tablename} WHERE {col} IN (SELECT {col} FROM {another_table});"
             print(query)
             cursor.execute(query)
             results = cursor.fetchall()
